@@ -34,6 +34,11 @@ a:hover {
   scroll-snap-type: y mandatory;
 }
 
+.contact-icon {
+  font-size: 40px;
+  margin-right: 10px;
+}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   p {

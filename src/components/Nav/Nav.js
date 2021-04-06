@@ -7,7 +7,8 @@ function Nav({ onMenuClick, onContactClick }) {
   return (
     <div className={styles.container}>
       <div>
-        <span className="material-icons" onClick={onMenuClick}>menu</span>
+        <i className="fas fa-bars" onClick={onMenuClick}></i>
+        {/* <span className="material-icons" onClick={onMenuClick}>menu</span> */}
       </div>
       <div>
         <span onClick={onContactClick}>Contact</span>

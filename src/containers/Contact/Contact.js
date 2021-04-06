@@ -1,13 +1,25 @@
 import React, { forwardRef } from 'react'
 import Section from '../../components/Section/Section'
+import styles from './Contact.module.css'
 
 const Contact = forwardRef((props, ref) => {
   return (
     <Section>
       <h2 ref={ref}>Contact</h2>
-      <p>Email: <a href='mailto: samrosser92@gmail.com'>samrosser92@gmail.com</a></p>
-      <p><a href='https://www.linkedin.com/in/sam-rosser/'>Linked In</a></p>
-      <p><a href='https://github.com/srosser2'>GitHub</a></p>
+      <div className={styles.contactContainer}>  
+        <div className={styles.contactItem}>
+          <a href='mailto: samrosser92@gmail.com' target='_blank'><i className="fas fa-envelope-square contact-icon"></i></a>
+          <a href='mailto: samrosser92@gmail.com' target='_blank'>samrosser92@gmail.com</a>
+        </div>
+        <div className={styles.contactItem}>
+          <a href='https://www.linkedin.com/in/sam-rosser/' target='_blank'><i className="fab fa-linkedin contact-icon"></i></a>
+          <a href='https://www.linkedin.com/in/sam-rosser/' target='_blank'>linkedin.com/in/sam-rosser/</a>
+        </div>
+        <div className={styles.contactItem}>
+          <a href='https://github.com/srosser2' target='_blank'><i className="fab fa-github-square contact-icon"></i></a>
+          <a href='https://github.com/srosser2' target='_blank'>github.com/srosser2</a>
+        </div>
+      </div>
     </Section>
   )
 })

@@ -5,10 +5,11 @@
   align-items: center;
   width: 100%;
   color: coral;
+  font-size: 22px;
 }
 
 .container > div {
-  margin: 10px 20px;
+  margin: 20px 40px;
   cursor: pointer;
 }
 
