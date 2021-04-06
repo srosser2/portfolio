@@ -1,0 +1,11 @@
+.container {
+  background-color: #f3f3f3;
+  height: 100vh;
+  /* color: #fff; */
+  display: flex;
+  flex-direction: column;
+}
+
+.innerContainer {
+  margin: 60px 20px;
+}

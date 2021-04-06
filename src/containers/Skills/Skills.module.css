@@ -1,0 +1,13 @@
+.skillsContainer {
+  display: flex;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+}
+
+
+.techIcon {
+  flex-basis: 10%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}

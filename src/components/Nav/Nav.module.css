@@ -1,0 +1,41 @@
+.container {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: coral;
+}
+
+.container > div {
+  margin: 10px 20px;
+  cursor: pointer;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container {
+    align-items: center;
+  }
+  
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container {
+    /* justify-content: center; */
+  }
+  .container > div {
+    /* width: 1200px; */
+    /* align-self: center; */
+  }
+}
