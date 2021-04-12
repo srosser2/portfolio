@@ -1,10 +1,9 @@
-import React from 'react'
-import styles from './About.module.css'
+import React, { forwardRef } from 'react'
 import Section from '../../components/Section/Section'
 
-export default function About() {
+const About = forwardRef((props, ref) => {
   return (
-    <Section style={{ backgroundColor: 'rgb(0,0,0,0.75)', color: 'white' }}>
+    <Section style={{ backgroundColor: 'rgb(0,0,0,0.75)', color: 'white' }} fwdRef={ref}>
       <h2>About</h2>
       <p>I'm a Full Stack Developer based in London. I love building things! I am currently transitioning from a career in Project Management, where I developed a taste for coding.</p> 
       <br />
@@ -12,4 +11,6 @@ export default function About() {
     </Section>
 
   )
-}
+})
+
+export default About;

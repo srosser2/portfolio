@@ -14,18 +14,26 @@ h2 {
   margin-bottom: 20px;
 }
 
+h3 {
+  margin-bottom: 20px;
+  font-weight: normal
+}
+
 p {
   line-height: 180%;
   margin-bottom: 20px;
+  font-size: 14px;
 }
 
 a {
-  text-decoration: none;
+  /* text-decoration: none; */
   color: black;
+  /* color: coral; */
 }
 
 a:hover {
   text-decoration: underline;
+  color: coral;
 }
 
 .App {
@@ -41,9 +49,7 @@ a:hover {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  p {
-    width: 50%;
-  }
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -55,7 +61,7 @@ a:hover {
     font-size: 48px;
   }
   p {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 

@@ -4,8 +4,8 @@ import styles from './Contact.module.css'
 
 const Contact = forwardRef((props, ref) => {
   return (
-    <Section>
-      <h2 ref={ref}>Contact</h2>
+    <Section fwdRef={ref}>
+      <h2>Contact</h2>
       <div className={styles.contactContainer}>  
         <div className={styles.contactItem}>
           <a href='mailto: samrosser92@gmail.com' target='_blank'><i className="fas fa-envelope-square contact-icon"></i></a>

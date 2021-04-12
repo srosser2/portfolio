@@ -1,45 +1,50 @@
-import React from 'react'
-import styles from './Projects.module.css'
-import { Link } from 'react-router-dom'
+import React, { forwardRef } from 'react'
+import { useHistory } from 'react-router-dom'
+
 import Section from '../../components/Section/Section'
+import Button from '../../components/Button/Button'
 
 
 
-export default function Projects() {
+const Projects = forwardRef((props, ref) => {
+  const history = useHistory()
   return (<>
-    <Section style={{ backgroundColor: 'rgb(0,0,0,0.1)' }}>
+    <Section style={{ backgroundColor: 'rgb(0,0,0,0.1)' }} fwdRef={ref}>
       <h2>Tetris</h2>
       <p>A retro classic recreated with Vanilla JavaScript.</p>
       <div>
-        <a href={'https://srosser2.github.io/GA01-Tetris/'} className={styles.projectLink} target='blank'>See Project</a>
+        <Button clickHandler={() => window.open('https://srosser2.github.io/GA01-Tetris/', '_blank')}>See Project</Button>
+        <Button clickHandler={() => history.push('/tetris')} type={'secondary'}>Learn More <i className="fas fa-arrow-right" style={{ marginLeft: '10px'}}></i></Button>
       </div>
     </Section>
     <Section style={{ backgroundColor: 'rgb(0,0,0,0.01)' }}>
-      <h2>Circuit Mapper</h2>
-      <p>For the Formula One fans out there. Circuit Mapper invites you to discover racing tracks all around the world.</p>
       <div>
-        <a href={'https://srosser2.github.io/GA02-F1CircuitMapper/#/F1data/circuits'} className={styles.projectLink} target='blank'>See Project</a>
-        {/* <a href={'/'} className={styles.projectLink} target='blank'>Learn More</a> */}
+        <h2>Circuit Mapper</h2>
+        <p>For the Formula One fans out there. Circuit Mapper invites you to discover racing tracks all around the world.</p>
+        <div>
+          <Button clickHandler={() => window.open('https://srosser2.github.io/GA02-F1CircuitMapper/#/F1data/circuits', '_blank')}>See Project</Button>
+          <Button clickHandler={() => history.push('/circuit-mapper')} type={'secondary'}>Learn More <i className="fas fa-arrow-right" style={{ marginLeft: '10px'}}></i></Button>
+        </div>
       </div>
     </Section>
     <Section style={{ backgroundColor: 'rgb(0,0,0,0.025)' }}>
       <h2>Dérive</h2>
-      <p>Discover the world, share experiences and connect with like&ndash;minded travellers. Dérive is a social network for explorers.</p>
+      <p>Discover the world, share experiences and connect with like-minded travellers. Dérive is a social network for explorers.</p>
       <div>
-        <a href={'https://derivetravel.herokuapp.com/'} className={styles.projectLink} target='blank'>See Project</a>
-        {/* <a href={'/'} className={styles.projectLink} target='blank'>Learn More</a> */}
+        <Button clickHandler={() => window.open('https://derivetravel.herokuapp.com/', '_blank')}>See Project</Button>
+        <Button clickHandler={() => history.push('/derive')} type={'secondary'}>Learn More <i className="fas fa-arrow-right" style={{ marginLeft: '10px'}}></i></Button>
       </div>
     </Section>
     <Section style={{ backgroundColor: 'rgb(0,0,0,0.05)' }}>
       <h2>Street Share</h2>
       <p>Promoting the sharing economy in your neighbourhood. Street Share helps local communities share household items easily.</p>
       <div>
-        <a href={'https://street-share-app.herokuapp.com/'} className={styles.projectLink} target='blank'>See Project</a>
-        {/* <a href={'/'} className={styles.projectLink} target='blank'>Learn More</a> */}
+        <Button clickHandler={() => window.open('https://street-share-app.herokuapp.com/', '_blank')}>See Project</Button>
+        <Button clickHandler={() => history.push('/street-share')} type={'secondary'}>Learn More <i className="fas fa-arrow-right" style={{ marginLeft: '10px'}}></i></Button>
       </div>
     </Section>
   </>
-
-  
   )
-}
+})
+
+export default Projects

@@ -1,17 +1,21 @@
 import React from 'react'
 import styles from './Nav.module.css'
-import { withRouter, Link } from 'react-router-dom'
+import { withRouter, useHistory } from 'react-router-dom'
 
-function Nav({ onMenuClick, onContactClick }) {
+function Nav({ onMenuClick, onContactClick, contactRef }) {
+
+  const history = useHistory()
 
   return (
     <div className={styles.container}>
       <div>
         <i className="fas fa-bars" onClick={onMenuClick}></i>
-        {/* <span className="material-icons" onClick={onMenuClick}>menu</span> */}
       </div>
       <div>
-        <span onClick={onContactClick}>Contact</span>
+        <span onClick={() => {
+          history.push('/')
+          onContactClick(contactRef)
+        }}>Contact</span>
       </div>
     </div>
   )

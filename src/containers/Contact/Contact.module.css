@@ -1,5 +1,6 @@
 .contactContainer {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -7,4 +8,24 @@
   display: flex;
   align-items: center;
   margin: 30px 0;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .contactContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

@@ -1,50 +1,42 @@
-.skillsContainer {
-  display: flex;
-  /* justify-content: center; */
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-
-.techIcon {
-  flex-basis: 25%;
+.experienceContainer {
   display: flex;
   flex-direction: column;
-  align-content: center;
-  align-items: center;
+  justify-content: space-between;
 }
 
-.techIcon span {
-  font-size: 30px;
+.experienceContainer > div {
+  display: flex;
+  flex-direction: column;
+  flex-grow: grow;
 }
 
-.techIcon p {
-  font-size: 12px;
+.experienceContainer h3,
+.experienceContainer h4 {
+  margin-bottom: 10px;
+}
+
+.experienceContainer p {
+  font-size: 14px;
+  width: 100%;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .techIcon {
-    flex-basis: 10%;
-  }
-  .techIcon span {
-    font-size: 40px;
-  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .techIcon span {
-    font-size: 45px;
+  .experienceContainer {
+    flex-direction: row;
+    /* justify-content: space-around; */
   }
-  .techIcon p {
-    font-size: 16px;
+  .experienceContainer > div {
+    flex-basis: 45%;
   }
-
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {  
+@media only screen and (min-width: 992px) {
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */

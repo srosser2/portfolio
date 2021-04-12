@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import Section from '../../components/Section/Section'
 import styles from './Skills.module.css'
 
-export default function Skills() {
+const Skills = forwardRef((props, ref) => {
   const icons = [
     {
       label: 'JavaScript',
@@ -17,12 +17,12 @@ export default function Skills() {
       icon: 'icon-react'
     },
     {
-      label: 'PHP',
-      icon: 'icon-php-alt'
-    },
-    {
       label: 'Python',
       icon: 'icon-python'
+    },
+    {
+      label: 'PHP',
+      icon: 'icon-php-alt'
     },
     {
       label: 'HTML5',
@@ -30,23 +30,27 @@ export default function Skills() {
     },
     {
       label: 'CSS',
-      icon: 'icon-css3'
+      icon: 'icon-css3-alt'
     },
     {
-      label: 'JIRA',
-      icon: 'icon-jira-alt'
+      label: 'SASS',
+      icon: 'icon-sass'
     },
     {
       label: 'MongoDB',
       icon: 'icon-mongodb'
     },
     {
+      label: 'PostgreSQL',
+      icon: 'icon-postgres'
+    },
+    {
       label: 'MySQL',
       icon: 'icon-mysql'
     },
     {
-      label: 'SASS',
-      icon: 'icon-sass'
+      label: 'Git',
+      icon: 'icon-git'
     },
     {
       label: 'GitHub',
@@ -57,10 +61,6 @@ export default function Skills() {
       icon: 'icon-heroku'
     },
     {
-      label: 'Selenium',
-      icon: 'icon-selenium'
-    },
-    {
       label: 'Babel',
       icon: 'icon-babel'
     },
@@ -69,16 +69,16 @@ export default function Skills() {
       icon: 'icon-webpack'
     },
     {
-      label: 'PostgreSQL',
-      icon: 'icon-postgres'
+      label: 'Selenium',
+      icon: 'icon-selenium'
+    },
+    {
+      label: 'JIRA',
+      icon: 'icon-jira-alt'
     },
     {
       label: 'Illustrator',
       icon: 'icon-illustrator'
-    },
-    {
-      label: 'Git',
-      icon: 'icon-git'
     },
     {
       label: 'Debian',
@@ -87,18 +87,24 @@ export default function Skills() {
     
   ]
   return (
-    <Section>
+    <Section fwdRef={ref}>
       <h2>Skills</h2>
       <div className={styles.skillsContainer}>
           {icons.map(icon => {
             return (
               <div key={icon.label} className={styles.techIcon}>
-                <span className={icon.icon} style={{ fontSize: '50px'}}></span>
-                <p>{icon.label}</p>
+                <div>
+                  <span className={icon.icon}></span>
+                </div>
+                <div>
+                  <p>{icon.label}</p>
+                </div>
               </div>
             )
           })}
       </div>
     </Section>
   )
-}
+})
+
+export default Skills
