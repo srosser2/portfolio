@@ -2,3 +2,50 @@
   margin-right: 30px;
   font-size: 18px;
 }
+
+.twoColumnFlex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.twoColumnFlex > div {
+  flex-basis: 48%;
+}
+
+.descriptionContainer {
+  align-self: center;
+}
+
+.imageContainer {
+  align-self: center;
+  margin: 20px 0;
+}
+
+.projectImage {
+  width: 100vw;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .twoColumnFlex {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .projectImage {
+    width: 100%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
