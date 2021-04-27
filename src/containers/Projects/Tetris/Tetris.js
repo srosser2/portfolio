@@ -19,10 +19,7 @@ const Tetris = ({ onContactClick, contactRef }) => {
       <p>Try the game out for yourself and see if you can place on the leaderboard.</p>
 
       <Button clickHandler={() => window.open('https://srosser2.github.io/GA01-Tetris/', '_blank')}>See Project</Button>
-      <Button clickHandler={() => {
-        history.push('/')
-        onContactClick(contactRef)
-      }} type={'secondary'}>Get In Touch</Button>
+      <Button clickHandler={() => window.open('https://github.com/srosser2/GA01-Tetris', '_blank')} type={'secondary'}><span className={'icon-github-circle'} style={{ fontSize: '32px'}}></span> GitHub</Button>
 
     </Section>
   )

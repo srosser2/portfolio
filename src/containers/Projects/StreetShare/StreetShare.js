@@ -17,10 +17,7 @@ const StreetShare = ({ onContactClick, contactRef }) => {
       <p>My biggest accomplishment in this project was to integrate a live chat feature using <a href='https://socket.io/' target='_blank'>Socket.IO</a>. This allows users to catch up with others in their local area and arrange bookings of items.</p>
 
       <Button clickHandler={() => window.open('https://street-share-app.herokuapp.com/', '_blank')}>See Project</Button>
-      <Button clickHandler={() => {
-        history.push('/')
-        onContactClick(contactRef)
-      }} type={'secondary'}>Get In Touch</Button>
+      <Button clickHandler={() => window.open('https://github.com/srosser2/GA04-StreetShare', '_blank')} type={'secondary'}><span className={'icon-github-circle'} style={{ fontSize: '32px'}}></span> GitHub</Button>
 
     </Section>
   )

@@ -15,10 +15,7 @@ const CircuitMapper = ({ onContactClick, contactRef }) => {
       <p>I have always loved looking at maps. I can spend hours on Google Maps searching the globe. So I was delighted to be tasked with building the map component for this project. The Ergast API provides the latitude and longitude of each circuit, so I was able to plug this into <a href='https://www.mapbox.com/' target='_blank'>MapBox</a> to display all tracks across the world.</p>
 
       <Button clickHandler={() => window.open('https://srosser2.github.io/GA02-F1CircuitMapper/#/F1data/circuits', '_blank')}>See Project</Button>
-      <Button clickHandler={() => {
-        history.push('/')
-        onContactClick(contactRef)
-      }} type={'secondary'}>Get In Touch</Button>
+      <Button clickHandler={() => window.open('https://github.com/srosser2/GA02-F1CircuitMapper', '_blank')} type={'secondary'}><span className={'icon-github-circle'} style={{ fontSize: '32px'}}></span> GitHub</Button>
 
     </Section>
   )

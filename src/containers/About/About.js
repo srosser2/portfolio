@@ -5,9 +5,11 @@ const About = forwardRef((props, ref) => {
   return (
     <Section style={{ backgroundColor: 'rgb(0,0,0,0.75)', color: 'white' }} fwdRef={ref}>
       <h2>About</h2>
-      <p>I'm a Full Stack Developer based in London. I love building things! I am currently transitioning from a career in Project Management, where I developed a taste for coding.</p> 
+      <p>I&rsquo;m a London based Junior Developer transitioning from a career in Project Management. I have recently completed a Software Development bootcamp, which provided me with the opportunity to apply the full stack development skills I have been learning over the past 3 years.</p> 
       <br />
-      <p>I'm looking for opportunities in web development. Check out my projects to get a flavour of what I can do.</p>
+      <p>My role as a Project Lead at Profusion gave me an intimate experience into the software development cycle, using Scrum to deliver complex enterprise applications.</p>
+      <br />
+      <p>Software Development appeals to my methodical nature, and my experience to date has led naturally to this career change. I am seeking my first official role as a developer so I can build on my knowledge, learn from others and contribute to larger projects. </p>
     </Section>
 
   )
